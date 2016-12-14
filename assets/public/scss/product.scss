@@ -48,6 +48,10 @@
     }
   }
 
+  &-footer > .panel {
+    border: none;
+  }
+
   &-details {
     tr[data-detail-name="price"] td:last-child {
       color: $price-comparison-current-price-color;

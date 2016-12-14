@@ -1,0 +1,29 @@
+.related-products-tumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s, all 0.3s ease-in-out;
+  opacity: 0.85;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  &:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.06);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.06);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.06);
+    transition: 0.3s all ease-in-out;
+    opacity: 1.0;
+  }
+}
+.related-products-tumbnail > img {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: auto;
+}

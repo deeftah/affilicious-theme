@@ -10,6 +10,7 @@
                 <li class="active">
                     <a href="#related-products" data-toggle="tab">
                         <?php _e('Related products', 'affilicious-theme'); ?>
+                        <i class="fa fa-plus"></i>
                     </a>
                 </li>
             <?php endif; ?>
@@ -17,6 +18,7 @@
                 <li <?php if(empty($relatedProductsQuery)) echo 'class="active"'; ?>>
                     <a href="#related-accessories" data-toggle="tab">
                         <?php _e('Related accessories', 'affilicious-theme'); ?>
+                        <i class="fa fa-wrench"></i>
                     </a>
                 </li>
             <?php endif; ?>
@@ -30,8 +32,8 @@
                         <?php while($relatedProductsQuery->have_posts()): $relatedProductsQuery->the_post(); ?>
                         <?php $affiliateLink = aff_get_product_affiliate_link($relatedProductsQuery->post); ?>
 
-                            <div class="col-md-4">
-                                <div class="thumbnail">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="related-products-tumbnail">
 
                                     <?php if(has_post_thumbnail()): ?>
                                         <?php $linkPreviewImage = afft_link_product_preview_image(); ?>
