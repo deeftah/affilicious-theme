@@ -1,0 +1,88 @@
+@import "variables";
+#related-products, #related-accessories {
+  .btn {
+    padding: 9px 16px;
+    &-review, &-buy {
+      transition: 0.3s all ease-in-out;
+      overflow: hidden;
+      &:hover {
+        transition: 0.3s all ease-in-out;
+        color: white;
+        i {
+          opacity: 1;
+          transition: 0.4s all ease-in-out;
+          transform: translateY(0px);
+          font-size: 18px;
+        }
+      }
+      i {
+        opacity: 0.5;
+        transition: 0.4s all ease-in-out;
+        transform: translateY(25px);
+        font-size: 0;
+      }
+    }
+    &-review {
+      &:hover {
+        background-color: #35a0c6;
+      }
+    }
+    &-buy {
+      &:hover {
+        background-color: #ff870a;
+      }
+    }
+  }
+  .caption-shop-info {
+    display: flex;
+    flex-wrap: wrap;
+    p.text-muted {
+      width: 50%;
+      line-height: 1.5;
+      font-size: 14px;
+      &:nth-child(2) {
+        text-align: right;
+      }
+      &:last-child {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .thumbnail {
+    @extend .thumbnail;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    opacity: 0.85;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s, all 0.3s ease-in-out;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    &:hover {
+      transform: scale(1.05);
+      -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.06);
+      -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.06);
+      box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.06);
+      transition: 0.3s all ease-in-out;
+      opacity: 1.0;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .caption-shop-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  #related-products .caption-shop-info p.text-muted {
+    width: 100%;
+    &:nth-child(2) {
+      text-align: center;
+    }
+  }
+}
+@media screen and (width: 600px) and (width: 768px) {
+  #related-products .caption-shop-info p.text-muted:nth-child(2) {
+    text-align: right;
+  }
+}
