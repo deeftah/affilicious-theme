@@ -33,6 +33,7 @@ var assetPaths = {
             'assets/vendor/bootstrap-3/less/bootstrap.less'
         ],
         js: [
+            'assets/vendor/slick/js/**',
             'assets/vendor/jquery/js/**',
             'assets/vendor/retina/js/**',
             'assets/vendor/bootstrap-3/js/affix.js',
